@@ -1,7 +1,7 @@
 import pickle
 from main import clf
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScalar
+from sklearn.preprocessing import StandardScaler
 
 def test_pipeline_and_scalar():
     is_pipeline = isinstance(clf, Pipeline)
@@ -9,7 +9,7 @@ def test_pipeline_and_scalar():
 
     if is_pipeline:
         first_step = [value for value in clf.named_steps.values()][0]
-        assert isinstance(first_step, StandardScalar)
+        assert isinstance(first_step, StandardScaler)
 
 
 def test_accuracy():
